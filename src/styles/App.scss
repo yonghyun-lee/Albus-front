@@ -56,45 +56,18 @@ header {
         margin-top: 40px;
         font-size: 1.8rem;
         font-weight: 900;
-        width: 130px;
+        width: 150px;
         font-family: $RobotoLt;
         background-color: #f03e3e;
       }
+
       .loginBtn:hover {
         background-color: #fa5252;
       }
     }
   }
+}
 
-  //.title {
-  //  position: absolute;
-  //  margin-left: auto;
-  //  margin-right: auto;
-  //  font-family: $DancingScript;
-  //  color: #ffffff;
-  //  //opacity: 0.85;
-  //  font-size: 5rem;
-  //  //padding-bottom: 50px;
-  //  z-index: 2;
-  //  display: flex;
-  //  flex-direction: column;
-  //  align-items: center;
-  //
-  //  .loginBtn {
-  //    margin-top: 20px;
-  //    font-size: 1.6rem;
-  //    font-weight: 900;
-  //    width: 150px;
-  //    //padding: 10px;
-  //    //-webkit-border-radius: 15px;
-  //    //-moz-border-radius: 15px;
-  //    //border-radius: 15px;
-  //    background-color: #f03e3e;
-  //  }
-  //
-  //  .loginBtn:hover {
-  //    background-color: #fa5252;
-  //  }
-  //}
-
+.googleLoginBtn {
+  width: 250px;
 }

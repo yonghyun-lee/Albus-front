@@ -2,24 +2,68 @@ import React, { Component } from 'react';
 import '../styles/App.scss';
 import Fab from '@material-ui/core/Fab';
 import {Button} from "@material-ui/core";
+import { GoogleLogin } from 'react-google-login';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogTitle from '@material-ui/core/DialogTitle';
+
+const responseGoogle = (response) => {
+  console.log(response);
+};
 
 class App extends Component {
+
+  state = {
+    open: false,
+  };
+
+  handleClickOpen = () => {
+    this.setState({ open: true });
+  };
+
+  handleClose = () => {
+    this.setState({ open: false });
+  };
+
   render() {
+
     return (
       <header>
         <div className="container">
           <nav>
             <h1>Albus</h1>
-            <Button variant="outlined" color="secondary">Login</Button>
+            <Button variant="outlined" color="secondary" onClick={this.handleClickOpen}>Login</Button>
           </nav>
           <div className="title">
             <h1>Make your Album.</h1>
-            <Fab color={"secondary"} variant="extended" className="loginBtn">
-              Start
+            <Fab color={"secondary"} variant="extended" className="loginBtn" onClick={this.handleClickOpen}>
+              Login
             </Fab>
-            {/*<button className="loginBtn">*/}
-            {/*  Login*/}
-            {/*</button>*/}
+            <Dialog
+              // fullWidth={true}
+              maxWidth="sm"
+              open={this.state.open}
+              onClose={this.handleClose}
+              aria-labelledby="form-dialog-title"
+            >
+              <DialogTitle style={{textAlign: "center"}} id="form-dialog-title">Login</DialogTitle>
+              <DialogContent style={{textAlign: "center"}}>
+                <GoogleLogin
+                  className="googleLoginBtn"
+                  clientId="865430704932-rlq500gfbvm6no0p0mmrg0q5aesthndn.apps.googleusercontent.com"
+                  buttonText="구글계정으로 로그인"
+                  onSuccess={responseGoogle}
+                  onFailure={responseGoogle}
+                  cookiePolicy={'single_host_origin'}
+                />
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={this.handleClose} color="primary">
+                  Cancel
+                </Button>
+              </DialogActions>
+            </Dialog>
           </div>
         </div>
       </header>
