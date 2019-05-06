@@ -1,74 +1,26 @@
-import React, { Component } from 'react';
-import '../styles/App.scss';
-import Fab from '@material-ui/core/Fab';
-import {Button} from "@material-ui/core";
-import { GoogleLogin } from 'react-google-login';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import { LoginPage } from "../pages";
+import { Helmet } from "react-helmet";
+import NotFound from "../pages/errors/NotFound";
 
-const responseGoogle = (response) => {
-  console.log(response);
+const App = () => {
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>velog</title>
+        <meta
+          name="description"
+          content="개발자들을 위한 취향저격 블로그 서비스. 어디서 글 쓸지 고민하지 말고 벨로그에서 시작하세요."
+        />
+        <meta property="fb:app_id" content="203040656938507" />
+      </Helmet>
+      <Switch>
+        <Route exact path="/" component={LoginPage} />
+        <Route component={NotFound} />
+      </Switch>
+    </React.Fragment>
+  );
 };
-
-class App extends Component {
-
-  state = {
-    open: false,
-  };
-
-  handleClickOpen = () => {
-    this.setState({ open: true });
-  };
-
-  handleClose = () => {
-    this.setState({ open: false });
-  };
-
-  render() {
-
-    return (
-      <header>
-        <div className="container">
-          <nav>
-            <h1>Albus</h1>
-            <Button variant="outlined" color="secondary" onClick={this.handleClickOpen}>Login</Button>
-          </nav>
-          <div className="title">
-            <h1>Make your Album.</h1>
-            <Fab color={"secondary"} variant="extended" className="loginBtn" onClick={this.handleClickOpen}>
-              Login
-            </Fab>
-            <Dialog
-              // fullWidth={true}
-              maxWidth="sm"
-              open={this.state.open}
-              onClose={this.handleClose}
-              aria-labelledby="form-dialog-title"
-            >
-              <DialogTitle style={{textAlign: "center"}} id="form-dialog-title">Login</DialogTitle>
-              <DialogContent style={{textAlign: "center"}}>
-                <GoogleLogin
-                  className="googleLoginBtn"
-                  clientId="865430704932-rlq500gfbvm6no0p0mmrg0q5aesthndn.apps.googleusercontent.com"
-                  buttonText="구글계정으로 로그인"
-                  onSuccess={responseGoogle}
-                  onFailure={responseGoogle}
-                  cookiePolicy={'single_host_origin'}
-                />
-              </DialogContent>
-              <DialogActions>
-                <Button onClick={this.handleClose} color="primary">
-                  Cancel
-                </Button>
-              </DialogActions>
-            </Dialog>
-          </div>
-        </div>
-      </header>
-    );
-  }
-}
 
 export default App;
