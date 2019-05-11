@@ -1,0 +1,16 @@
+@import "../../styles/utils";
+
+nav {
+  color: #ffffff;
+  padding-top: 6rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  .nav-login {
+    font-size: 1.2rem;
+    width: 100px;
+  }
+}

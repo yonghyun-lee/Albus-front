@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script:700|Pacifico');
-
-$DancingScript: 'Dancing Script', cursive;
-$RobotoLt: "Roboto Lt", sans-serif;
+@import "utils";
 
 * {
   margin: 0;
@@ -12,7 +9,6 @@ $RobotoLt: "Roboto Lt", sans-serif;
 }
 
 html {
-  font-family: "Roboto Lt", sans-serif;
+  font-family: $RobotoLt;
   font-size: 10px;
-  color: #333;
 }

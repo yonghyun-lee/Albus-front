@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import LoginModal from "../components/LoginModal";
+import LoginModal from "../components/LoginModal/LoginModal";
 
 class LoginContainer extends Component {
 

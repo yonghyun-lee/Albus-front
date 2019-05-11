@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
-import Fab from "@material-ui/core/Fab";
-import Dialog from "@material-ui/core/Dialog";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogContent from "@material-ui/core/DialogContent";
+import Fab from "@material-ui/core/Fab/index";
+import Dialog from "@material-ui/core/Dialog/index";
+import DialogTitle from "@material-ui/core/DialogTitle/index";
+import DialogContent from "@material-ui/core/DialogContent/index";
 import {GoogleLogin} from "react-google-login";
-import DialogActions from "@material-ui/core/DialogActions";
+import DialogActions from "@material-ui/core/DialogActions/index";
 import {Button} from "@material-ui/core";
+import './LoginModal.scss'
 
 class LoginModal extends Component{
 
@@ -26,7 +27,7 @@ class LoginModal extends Component{
 
     return (
       <div>
-        <Fab color={"secondary"} variant="extended" className="loginBtn" onClick={this.handleClickOpen}>
+        <Fab color="secondary" variant="extended" className="loginBtn" onClick={this.handleClickOpen}>
           Login
         </Fab>
         <Dialog

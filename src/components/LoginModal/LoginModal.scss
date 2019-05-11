@@ -1,0 +1,20 @@
+@import "../../styles/utils";
+
+div {
+  .loginBtn {
+    margin-top: 40px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    width: 150px;
+    font-family: $RobotoLt;
+    background-color: #f03e3e;
+
+    &:hover {
+      background-color: #fa5252;
+    }
+  }
+}
+
+.googleLoginBtn {
+  width: 250px;
+}
