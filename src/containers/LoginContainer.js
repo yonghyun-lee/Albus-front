@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import LoginModal from "../components/LoginModal/LoginModal";
+import LoginModalContainer from "./LoginModalContainer";
 
 class LoginContainer extends Component {
 
@@ -13,12 +13,10 @@ class LoginContainer extends Component {
 
   render() {
     return (
-      <div>
-        <LoginModal
+        <LoginModalContainer
           onSocialLogin={this.onSocialLogin}
           onSocialFail={this.onSocialFail}
         />
-      </div>
     );
   }
 }

@@ -10,31 +10,19 @@ import './LoginModal.scss'
 
 class LoginModal extends Component{
 
-  state = {
-    open: false,
-  };
-
-  handleClickOpen = () => {
-    this.setState({ open: true });
-  };
-
-  handleClose = () => {
-    this.setState({ open: false });
-  };
-
   render() {
-    const {onSocialLogin, onSocialFail} = this.props;
+    const {onSocialLogin, onSocialFail, handleOpen, handleClose, modalState} = this.props;
 
     return (
       <div>
-        <Fab color="secondary" variant="extended" className="loginBtn" onClick={this.handleClickOpen}>
+        <Fab color="secondary" variant="extended" className="loginBtn" onClick={handleOpen}>
           Login
         </Fab>
         <Dialog
           // fullWidth={true}
           maxWidth="sm"
-          open={this.state.open}
-          onClose={this.handleClose}
+          open={modalState}
+          onClose={handleClose}
           aria-labelledby="form-dialog-title"
         >
           <DialogTitle style={{textAlign: "center"}} id="form-dialog-title">Login</DialogTitle>
@@ -49,7 +37,7 @@ class LoginModal extends Component{
             />
           </DialogContent>
           <DialogActions>
-            <Button onClick={this.handleClose} color="primary">
+            <Button onClick={handleClose} color="primary">
               Cancel
             </Button>
           </DialogActions>

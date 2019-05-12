@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Header.scss';
 import {Button} from "@material-ui/core";
+import {LoginModalActions} from "../../store/actionCreators";
 
 class Header extends Component {
   render() {
@@ -10,7 +11,7 @@ class Header extends Component {
         <Button className="nav-login"
                 variant="outlined"
                 color="secondary"
-                onClick={this.handleClickOpen}>
+                onClick={LoginModalActions.open}>
           Login
         </Button>
       </nav>
