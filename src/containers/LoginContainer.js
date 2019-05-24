@@ -1,24 +1,30 @@
 import React, {Component} from "react";
 import LoginModalContainer from "./LoginModalContainer";
+import AuthService from "../lib/AuthService";
+import ErrorException from "../lib/ErrorException";
+import {withRouter} from "react-router-dom";
 
 class LoginContainer extends Component {
 
-  onSocialLogin = () => {
+  onSocialLogin = async (response) => {
+    try {
+      await AuthService.login(response.accessToken);
+    } catch (e) {
+      const res = ErrorException.getResponse(e);
+      if (res.status === 401) {
 
-  };
-
-  onSocialFail = () => {
-
+      }
+    }
   };
 
   render() {
     return (
         <LoginModalContainer
           onSocialLogin={this.onSocialLogin}
-          onSocialFail={this.onSocialFail}
+          onSocialFail={ErrorException.googleOAuthFail}
         />
     );
   }
 }
 
-export default LoginContainer;
+export default withRouter(LoginContainer);
