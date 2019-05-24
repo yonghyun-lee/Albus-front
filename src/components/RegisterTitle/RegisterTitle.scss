@@ -1,8 +1,7 @@
 @import "../../styles/utils";
 
 .registerTitle {
-  background-color: #ff922b;
-  opacity: 0.9;
+  background-color: rgba(255, 168, 168, 0.5);
   width: 50%;
   height: 100vh;
   display: flex;
@@ -11,7 +10,11 @@
   font-family: $RobotoLt;
 
   .registerOverview {
-    color: black;
+    color: white;
     font-size: 3rem;
+
+    p {
+      float: right;
+    }
   }
 }

@@ -6,7 +6,8 @@ class RegisterTitle extends Component {
     return (
       <div className="registerTitle">
         <div className="registerOverview">
-          <h1>Welcome.</h1>
+          <h1>Welcome to Albus</h1>
+          <p>please register</p>
         </div>
       </div>
     );
