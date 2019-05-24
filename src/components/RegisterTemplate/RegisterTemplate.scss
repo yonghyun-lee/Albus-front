@@ -1,0 +1,9 @@
+@import "../../styles/utils";
+
+.registerTemplate {
+  width: 100%;
+  height: 100vh;
+  background: url("../../static/images/intro.jpg");
+  background-size: cover;
+  display: flex;
+}

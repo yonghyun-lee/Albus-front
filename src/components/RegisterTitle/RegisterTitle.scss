@@ -1,0 +1,17 @@
+@import "../../styles/utils";
+
+.registerTitle {
+  background-color: #ff922b;
+  opacity: 0.9;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $RobotoLt;
+
+  .registerOverview {
+    color: black;
+    font-size: 3rem;
+  }
+}
