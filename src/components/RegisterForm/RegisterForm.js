@@ -11,7 +11,7 @@ class RegisterForm extends Component {
           </div>
           <div className="registerInput">
             <label htmlFor="email">Email*</label>
-            <input id="email" type="email" placeholder="Email" autoComplete="off"/>
+            <input id="email" type="email" placeholder="Email" autoComplete="off" disabled value={this.props.email}/>
           </div>
           <div className="registerInput">
             <label htmlFor="name">이름*</label>
