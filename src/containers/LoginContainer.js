@@ -11,10 +11,11 @@ class LoginContainer extends Component {
     await LoginActions.socialSuccess(response);
 
     try {
-      await AuthService.login(response.accessToken);
+      const res = await AuthService.login(response.accessToken);
+
+      console.log(res.data);
     } catch (e) {
       const res = ErrorException.getResponse(e);
-      console.log(e.response.data);
       if (res.status === 401) {
         this.props.history.push('/register');
       }
