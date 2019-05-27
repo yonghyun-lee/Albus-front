@@ -17,6 +17,7 @@ class AuthService {
       data: {
         accessToken: accessToken
       },
+      withCredentials: true,
       url: this.serverHost + '/auth/googleLogin'
     };
 

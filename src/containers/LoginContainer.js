@@ -13,8 +13,12 @@ class LoginContainer extends Component {
     try {
       const res = await AuthService.login(response.accessToken);
 
-      console.log(res.data);
+      if (res.status === 200) {
+        console.log(res);
+        this.props.history.push('/main');
+      }
     } catch (e) {
+      console.log(e);
       const res = ErrorException.getResponse(e);
       if (res.status === 401) {
         this.props.history.push('/register');
