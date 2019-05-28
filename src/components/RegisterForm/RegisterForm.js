@@ -2,7 +2,6 @@ import React  from 'react';
 import './RegisterForm.scss';
 
 export const RegisterForm = (props) => {
-  console.log(props.error);
   return (
     <div className="registerForm">
       <form onSubmit={props.onRegister}>
