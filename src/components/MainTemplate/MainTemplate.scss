@@ -1,7 +1,16 @@
 @import "../../styles/utils";
 
+body{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
 .mainTemplate {
   width: 100%;
-  height: 100vh;
   display: flex;
+  flex-direction: column;
+}
+
+.snapScroll {
+  scroll-snap-align: start;
 }

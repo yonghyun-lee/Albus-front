@@ -18,6 +18,7 @@ class ImageSliderContainer extends Component {
   render() {
     return (
       <ImageSlider
+        class={this.props.class}
       state={this.state}
       images={this.images}/>
     );

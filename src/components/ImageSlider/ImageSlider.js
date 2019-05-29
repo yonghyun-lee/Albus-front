@@ -33,7 +33,7 @@ const ImageSlider = (props) => {
   `;
 
   return (
-    <div className="imageSlider">
+    <div className={"imageSlider "+props.class}>
       <ImageWrapper className="imageSlider-wrapper">
         {images.map((property, index)=> <ImageView key={index} property={property}/>)}
       </ImageWrapper>
