@@ -3,6 +3,26 @@
 .albumList {
   width: 100%;
   height: 100vh;
-  background-color: burlywood;
-}
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  .albumList-header {
+    margin-top: 30px;
 
+    h1 {
+      text-align: center;
+      font-family: $DancingScript;
+      font-size: 6rem;
+    }
+  }
+
+  .albumList-content {
+    flex: 1;
+    display: inline-block;
+    padding-top: 30px;
+    padding-right: 200px;
+    padding-left: 200px;
+    float: left;
+    //flex-wrap: wrap;
+  }
+}

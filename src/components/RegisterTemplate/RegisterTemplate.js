@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './RegisterTemplate.scss';
 import RegisterTitle from "../RegisterTitle/RegisterTitle";
 import RegisterFormContainer from "../../containers/RegisterFormContainer";
-import Header from "../LandingHeader/Header";
+import Header from "../Header/Header";
 
 class RegisterTemplate extends Component {
   render() {

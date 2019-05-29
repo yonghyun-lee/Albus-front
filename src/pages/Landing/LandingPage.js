@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from "../../components/LandingHeader/Header";
+import Header from "../../components/Header/Header";
 import './LandingPage.scss'
 import LandingBody from "../../components/LandingBody/LandingBody";
 
