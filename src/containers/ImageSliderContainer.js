@@ -13,10 +13,6 @@ class ImageSliderContainer extends Component {
     };
   }
 
-  componentDidMount() {
-    console.log(document.cookie);
-  }
-
   images = [testImage, introImage, testImage];
 
   render() {

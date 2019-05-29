@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import MainTemplate from "../components/MainTemplate/MainTemplate";
+import MainContainer from "../containers/MainContainer";
 
 class MainPage extends Component{
 
   render() {
     return (
-      <MainTemplate/>
+      <MainContainer/>
     );
   }
 }
