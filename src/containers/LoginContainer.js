@@ -7,6 +7,14 @@ import {LoginActions} from "../store/actionCreators";
 
 class LoginContainer extends Component {
 
+  initialize = async () => {
+    AuthService.landingAuthCheck(this.props.isLoggedIn, this.props.history);
+  };
+
+  componentWillMount() {
+    this.initialize();
+  }
+
   onSocialLogin = async (response) => {
     await LoginActions.socialSuccess(response);
 

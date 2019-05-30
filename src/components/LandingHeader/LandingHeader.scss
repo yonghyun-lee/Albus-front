@@ -1,0 +1,22 @@
+@import "../../styles/utils";
+
+nav {
+  color: #ffffff;
+  position: absolute;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  .logo {
+    font-family: $DancingScript;
+    font-size: 3.5rem;
+    text-decoration: none;
+  }
+  .nav-login {
+    font-size: 1.2rem;
+    width: 100px;
+  }
+  z-index: 999;
+}

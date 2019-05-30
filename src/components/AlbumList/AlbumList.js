@@ -1,14 +1,14 @@
 import React  from 'react';
 import './AlbumList.scss';
-import Header from "../Header/Header";
 import Album from "../Album/Album";
 import Plus from "../Album/Plus";
+import Header from "../Header/Header";
 
 const AlbumList = (props) => {
 
   return (
     <div className={"albumList " + props.class}>
-      <Header/>
+      <Header logout={props.logout}/>
       <div className="albumList-header">
         <h1>Your Albums</h1>
       </div>

@@ -8,22 +8,7 @@ import AuthService from "../lib/AuthService";
 class MainContainer extends Component {
 
   initialize = async () => {
-    if (!this.props.isLoggedIn) {
-      const accessToken = Cookie.get('access_token');
-      if (accessToken) {
-        try {
-          await AuthService.checkToken();
-        } catch (e) {
-          if (e.response.data.status === 401) {
-            this.props.history.push('/');
-          } else {
-            console.error(e);
-          }
-        }
-      } else {
-        this.props.history.push('/');
-      }
-    }
+    AuthService.authCheck(this.props.isLoggedIn, this.props.history);
   };
 
   componentWillMount() {

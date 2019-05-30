@@ -1,4 +1,5 @@
 import * as axios from "axios";
+import Cookie from "js-cookie";
 
 class AuthService {
   serverHost;
@@ -43,6 +44,48 @@ class AuthService {
       throw e
     }
   };
+
+  landingAuthCheck = async (isLoggedIn, history) => {
+    if (isLoggedIn) {
+      history.push('/main');
+    } else {
+      const accessToken = Cookie.get('access_token');
+      if (accessToken) {
+        try {
+          const res = await this.checkToken();
+
+          if (res.status === 200) {
+            history.push('/main');
+          }
+        } catch (e) {
+          if (e.response.data.status === 401) {
+            Cookie.remove('access_token');
+          } else {
+            console.error(e);
+          }
+        }
+      }
+    }
+  };
+
+  authCheck = async (isLoggedIn, history) => {
+    if (!isLoggedIn) {
+      const accessToken = Cookie.get('access_token');
+      if (accessToken) {
+        try {
+          this.checkToken();
+        } catch (e) {
+          if (e.response.data.status === 401) {
+            history.push('/');
+          } else {
+            console.error(e);
+          }
+        }
+      } else {
+        history.push('/');
+      }
+    }
+  }
 }
 
 export default new AuthService();

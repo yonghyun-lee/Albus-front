@@ -5,10 +5,10 @@ import AlbumListContainer from "../../containers/AlbumListContainer";
 
 const MainTemplate = () => {
   return (
-    <section className="mainTemplate">
+    <div className="mainTemplate">
       <ImageSliderContainer class="snapScroll"/>
       <AlbumListContainer class="snapScroll"/>
-    </section>
+    </div>
   );
 };
 
