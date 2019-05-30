@@ -1,5 +1,6 @@
 import * as axios from "axios";
 import Cookie from "js-cookie";
+import {LoginActions} from "../store/actionCreators";
 
 class AuthService {
   serverHost;
@@ -55,6 +56,7 @@ class AuthService {
           const res = await this.checkToken();
 
           if (res.status === 200) {
+            await LoginActions.loginSuccess(res.data);
             history.push('/main');
           }
         } catch (e) {
@@ -73,7 +75,11 @@ class AuthService {
       const accessToken = Cookie.get('access_token');
       if (accessToken) {
         try {
-          this.checkToken();
+          const res = await this.checkToken();
+
+          if (res.status ===200) {
+            await LoginActions.loginSuccess(res.data);
+          }
         } catch (e) {
           if (e.response.data.status === 401) {
             history.push('/');

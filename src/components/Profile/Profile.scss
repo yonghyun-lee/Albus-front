@@ -1,0 +1,10 @@
+@import "../../styles/utils";
+
+.profile {
+  img {
+    border-radius: 50%;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

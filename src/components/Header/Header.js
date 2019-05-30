@@ -2,6 +2,7 @@ import React  from 'react';
 import './Header.scss';
 import {Button} from "@material-ui/core";
 import {NavLink} from "react-router-dom";
+import Profile from "../Profile/Profile";
 
 const Header = (props) => {
   console.log(props);
@@ -14,12 +15,13 @@ const Header = (props) => {
       >
         Albus
       </NavLink>
-      <Button className="nav-login"
-              variant="outlined"
-              color="secondary"
-              onClick={props.logout}>
-        Logout
-      </Button>
+      {/*<Button className="nav-login"*/}
+      {/*        variant="outlined"*/}
+      {/*        color="secondary"*/}
+      {/*        onClick={props.logout}>*/}
+      {/*  Logout*/}
+      {/*</Button>*/}
+      <Profile user={props.user}/>
     </nav>
   );
 };

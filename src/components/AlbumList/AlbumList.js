@@ -8,7 +8,7 @@ const AlbumList = (props) => {
 
   return (
     <div className={"albumList " + props.class}>
-      <Header logout={props.logout}/>
+      <Header user={props.user} logout={props.logout}/>
       <div className="albumList-header">
         <h1>Your Albums</h1>
       </div>

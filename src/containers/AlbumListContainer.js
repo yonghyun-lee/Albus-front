@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import AlbumList from "../components/AlbumList/AlbumList";
 import Cookie from "js-cookie";
 import {withRouter} from "react-router-dom";
+import {connect} from "react-redux";
 
 class AlbumListContainer extends Component {
 
@@ -13,10 +14,15 @@ class AlbumListContainer extends Component {
   render() {
     return (
       <AlbumList
+        user={this.props.user}
         class={this.props.class}
         logout={this.logout}/>
     );
   }
 }
 
-export default withRouter(AlbumListContainer);
+export default withRouter(
+  connect((state) => ({
+      user: state.login.user
+    })
+  )(AlbumListContainer));

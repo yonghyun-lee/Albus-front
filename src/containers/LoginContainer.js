@@ -23,6 +23,7 @@ class LoginContainer extends Component {
 
       if (res.status === 200) {
         console.log(res);
+        await LoginActions.loginSuccess(res.data.user);
         this.props.history.push('/main');
       }
     } catch (e) {
