@@ -1,5 +1,6 @@
 import React  from 'react';
 import './Profile.scss';
+import ProfileNavMenu from "../ProfileNavMenu/ProfileNavMenu";
 
 const Profile = (props) => {
   console.log(props.user);
@@ -7,6 +8,7 @@ const Profile = (props) => {
     <div className="profile">
       <img src={props.user.thumbnail} alt="thumbnail"/>
       {/*<img src={props.thumbnail || defaultThumbnail} alt="thumbnail" />*/}
+      <ProfileNavMenu/>
     </div>
   );
 };
