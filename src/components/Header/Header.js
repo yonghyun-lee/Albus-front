@@ -1,6 +1,5 @@
 import React  from 'react';
 import './Header.scss';
-import {Button} from "@material-ui/core";
 import {NavLink} from "react-router-dom";
 import Profile from "../Profile/Profile";
 

@@ -73,7 +73,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "deploy": "yarn build && aws s3 sync ./build s3://albus-front-react --profile=albus"
   },
   "eslintConfig": {
     "extends": "react-app"
