@@ -6,7 +6,7 @@ class AuthService {
   serverHost;
 
   constructor() {
-    this.serverHost = 'http://localhost:4000';
+    this.serverHost = 'http://ec2-13-209-4-222.ap-northeast-2.compute.amazonaws.com:4000';
   }
 
   login = async (accessToken) => {
