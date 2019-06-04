@@ -5,11 +5,11 @@ class ErrorException {
   };
 
   googleOAuthFail = (e) => {
-    console.error(e)
+    console.log(e)
   };
 
   loginFail = (e) => {
-    console.error(e.response.data.message);
+    console.log(e.response.data.message);
   }
 }
 

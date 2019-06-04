@@ -29,7 +29,7 @@ class LoginModal extends Component{
           <DialogContent style={{textAlign: "center"}}>
             <GoogleLogin
               className="googleLoginBtn"
-              clientId="865430704932-rlq500gfbvm6no0p0mmrg0q5aesthndn.apps.googleusercontent.com"
+              clientId="865430704932-er13mf9t4ekjvgj6fmovrh2qeuc2ojin.apps.googleusercontent.com"
               buttonText="구글 계정으로 로그인"
               onSuccess={onSocialLogin}
               onFailure={onSocialFail}
