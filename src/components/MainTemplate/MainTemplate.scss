@@ -3,6 +3,7 @@
 body{
   scroll-snap-type: y mandatory;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .mainTemplate {
