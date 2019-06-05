@@ -6,7 +6,7 @@ class AuthService {
   serverHost;
 
   constructor() {
-    this.serverHost = 'https://api.albus-service';
+    this.serverHost = 'https://api.albus-service.ml';
   }
 
   login = async (accessToken) => {
