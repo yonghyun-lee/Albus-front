@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import MainTemplate from "../components/MainTemplate/MainTemplate";
 import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
-import Cookie from 'js-cookie';
 import AuthService from "../lib/AuthService";
 
 class MainContainer extends Component {

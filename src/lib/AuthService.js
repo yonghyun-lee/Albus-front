@@ -1,12 +1,18 @@
 import * as axios from "axios";
 import Cookie from "js-cookie";
 import {LoginActions} from "../store/actionCreators";
+import 'dotenv/config';
 
 class AuthService {
   serverHost;
 
   constructor() {
-    this.serverHost = 'https://api.albus-service.ml';
+    console.log(process.env.NODE_ENV);
+    if (process.env.NODE_ENV === 'development') {
+      this.serverHost = 'http://localhost:4000';
+    } else {
+      this.serverHost = 'https://api.albus-service.ml';
+    }
   }
 
   login = async (accessToken) => {
