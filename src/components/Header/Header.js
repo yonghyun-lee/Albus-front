@@ -2,9 +2,9 @@ import React  from 'react';
 import './Header.scss';
 import {NavLink} from "react-router-dom";
 import Profile from "../Profile/Profile";
+import ProfileNavMenu from "../ProfileNavMenu/ProfileNavMenu";
 
 const Header = (props) => {
-  console.log(props);
   return (
     <nav>
       <NavLink
@@ -14,13 +14,8 @@ const Header = (props) => {
       >
         Albus
       </NavLink>
-      {/*<Button className="nav-login"*/}
-      {/*        variant="outlined"*/}
-      {/*        color="secondary"*/}
-      {/*        onClick={props.logout}>*/}
-      {/*  Logout*/}
-      {/*</Button>*/}
       <Profile user={props.user}/>
+      <ProfileNavMenu user={props.user} logout={props.logout}/>
     </nav>
   );
 };

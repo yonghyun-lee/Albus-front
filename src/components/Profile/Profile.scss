@@ -1,6 +1,8 @@
 @import "../../styles/utils";
 
 .profile {
+  position: absolute;
+  right: 50px;
   img {
     border-radius: 50%;
     &:hover {
