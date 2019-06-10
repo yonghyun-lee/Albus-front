@@ -52,6 +52,7 @@
     "react-app-polyfill": "^0.2.2",
     "react-dev-utils": "^8.0.0",
     "react-dom": "^16.8.6",
+    "react-full-page": "^0.1.7",
     "react-google-login": "^5.0.4",
     "react-helmet": "^5.2.1",
     "react-motion": "^0.5.2",
