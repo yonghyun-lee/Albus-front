@@ -1,6 +1,6 @@
 @import "../../styles/utils";
 
-.profile-nav-menu {
+#profile-nav-menu {
   width: 200px;
   background-color: white;
   color: black;
@@ -41,6 +41,10 @@
 
           &:visited {
             color: #000;
+          }
+
+          &:hover {
+            color: #ff8787;
           }
         }
       }
