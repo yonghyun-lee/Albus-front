@@ -5,8 +5,10 @@ const ProfileNavMenu = (props) => {
 
   const {email, username} = props.user;
 
+  console.log(props.open);
+
   return (
-    <nav id="profile-nav-menu">
+    <nav id="profile-nav-menu" className={props.open? "active":"inactive"}>
       <div className="profile-menu-info">
         <p className="name">{username}</p>
         <p className="email">{email}</p>

@@ -4,6 +4,7 @@ import {bindActionCreators} from "redux";
 import {actionCreators as LoginActionCreator} from './modules/login';
 import {actionCreators as LoginModalActionCreator} from './modules/loginModal';
 import {actionCreators as RegisterActionCreator} from './modules/register';
+import {actionCreators as ProfileActionCreator} from './modules/profile';
 
 import store from './index';
 
@@ -12,3 +13,4 @@ const { dispatch } = store;
 export const LoginActions = bindActionCreators(LoginActionCreator, dispatch);
 export const LoginModalActions = bindActionCreators(LoginModalActionCreator, dispatch);
 export const RegisterActions = bindActionCreators(RegisterActionCreator, dispatch);
+export const ProfileActions = bindActionCreators(ProfileActionCreator, dispatch);

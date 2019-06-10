@@ -15,6 +15,7 @@ class AlbumListContainer extends Component {
     return (
       <AlbumList
         user={this.props.user}
+        open={this.props.open}
         class={this.props.class}
         logout={this.logout}/>
     );
@@ -23,6 +24,7 @@ class AlbumListContainer extends Component {
 
 export default withRouter(
   connect((state) => ({
-      user: state.login.user
+      user: state.login.user,
+      open: state.profile.open
     })
   )(AlbumListContainer));
