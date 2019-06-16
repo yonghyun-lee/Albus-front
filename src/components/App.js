@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import NotFound from "../pages/errors/NotFound";
 import RegisterPage from "../pages/RegisterPage";
 import MainPage from "../pages/MainPage";
+import PicturePage from "../pages/PicturePage";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route exact path="/" component={LoginPage} />
         <Route exact path="/register" component={RegisterPage} />
         <Route exact path="/main" component={MainPage} />
+        <Route exact path="/picture" component={PicturePage} />
         <Route component={NotFound} />
       </Switch>
     </React.Fragment>

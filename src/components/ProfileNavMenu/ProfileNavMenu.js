@@ -1,5 +1,6 @@
 import React  from 'react';
 import './ProfileNavMenu.scss';
+import {Link} from "react-router-dom";
 
 const ProfileNavMenu = (props) => {
 
@@ -15,7 +16,7 @@ const ProfileNavMenu = (props) => {
       </div>
       <div>
         <ul>
-          <li><a href='#'>My Pictures</a></li>
+          <li><Link to="/picture">My Pictures</Link></li>
           <li><a href='#' onClick={props.logout}>Logout</a></li>
         </ul>
       </div>
