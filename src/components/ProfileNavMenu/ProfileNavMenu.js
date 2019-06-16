@@ -1,6 +1,7 @@
 import React  from 'react';
 import './ProfileNavMenu.scss';
-import {Link} from "react-router-dom";
+import {Link, withRouter} from "react-router-dom";
+import AuthService from "../../lib/AuthService";
 
 const ProfileNavMenu = (props) => {
 
@@ -17,11 +18,11 @@ const ProfileNavMenu = (props) => {
       <div>
         <ul>
           <li><Link to="/picture">My Pictures</Link></li>
-          <li><a href='#' onClick={props.logout}>Logout</a></li>
+          <li><a href='#' onClick={AuthService.logout}>Logout</a></li>
         </ul>
       </div>
     </nav>
   );
 };
 
-export default ProfileNavMenu;
+export default withRouter(ProfileNavMenu);

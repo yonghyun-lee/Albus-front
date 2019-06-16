@@ -97,6 +97,12 @@ class AuthService {
         history.push('/');
       }
     }
+  };
+
+  logout = async () => {
+    const domain = process.env.NODE_ENV==='development'? 'localhost':'albus-service.ml';
+    await Cookie.remove('access_token', domain);
+    window.location.reload();
   }
 }
 

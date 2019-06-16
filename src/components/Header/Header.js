@@ -16,7 +16,7 @@ const Header = (props) => {
         Albus
       </NavLink>
       <ProfileContainer user={props.user}/>
-      <ProfileNavMenu user={props.user} logout={props.logout} open={props.open}/>
+      <ProfileNavMenu user={props.user} open={props.open}/>
     </nav>
   );
 };
