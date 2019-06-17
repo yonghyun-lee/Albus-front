@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
 import AuthService from "../lib/AuthService";
+import MyPictureTemplate from "../components/MyPictureTemplate/MyPictureTemplate";
 
 class PictureContainer extends Component {
 
@@ -15,9 +16,7 @@ class PictureContainer extends Component {
 
   render() {
     return (
-      <div>
-        Picture Page
-      </div>
+      <MyPictureTemplate/>
     );
   }
 }
