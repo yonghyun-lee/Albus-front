@@ -6,7 +6,9 @@ import DialogContent from "@material-ui/core/DialogContent/index";
 import {GoogleLogin} from "react-google-login";
 import DialogActions from "@material-ui/core/DialogActions/index";
 import {Button} from "@material-ui/core";
-import './LoginModal.scss'
+import styles from './LoginModal.scss'
+import classNames from 'classnames/bind';
+const cx = classNames.bind(styles);
 
 class LoginModal extends Component{
 
@@ -15,7 +17,7 @@ class LoginModal extends Component{
 
     return (
       <div>
-        <Fab color="secondary" variant="extended" className="loginBtn" onClick={handleOpen}>
+        <Fab color="secondary" variant="extended" className={cx("loginBtn")} onClick={handleOpen}>
           Login
         </Fab>
         <Dialog
@@ -28,7 +30,7 @@ class LoginModal extends Component{
           <DialogTitle style={{textAlign: "center"}} id="form-dialog-title">Login</DialogTitle>
           <DialogContent style={{textAlign: "center"}}>
             <GoogleLogin
-              className="googleLoginBtn"
+              className={cx("googleLoginBtn")}
               clientId={process.env.NODE_ENV === 'development'?
                 "865430704932-rlq500gfbvm6no0p0mmrg0q5aesthndn.apps.googleusercontent.com"
                 :"865430704932-er13mf9t4ekjvgj6fmovrh2qeuc2ojin.apps.googleusercontent.com"}

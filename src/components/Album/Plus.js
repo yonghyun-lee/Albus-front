@@ -1,6 +1,9 @@
 import React  from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome/index";
 import {faPlus} from "@fortawesome/free-solid-svg-icons/index";
+import styles from './Album.scss';
+import classNames from 'classnames/bind';
+const cx = classNames.bind(styles);
 
 const Plus = (props) => {
 

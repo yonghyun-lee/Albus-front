@@ -1,11 +1,13 @@
 import React  from 'react';
-import './Picture.scss';
+import styles from './Picture.scss';
+import classNames from 'classnames/bind';
+const cx = classNames.bind(styles);
 
 const Picture = (props) => {
 
   return (
-    <div className="myPicture-item">
-      <div className="myPicture-item-content">
+    <div className={cx("myPicture-item")}>
+      <div className={cx("myPicture-item-content")}>
 
       </div>
     </div>

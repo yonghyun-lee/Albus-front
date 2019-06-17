@@ -1,12 +1,14 @@
 import React  from 'react';
-import './MainTemplate.scss';
+import styles from './MainTemplate.scss';
 import ImageSliderContainer from "../../containers/ImageSliderContainer";
 import AlbumListContainer from "../../containers/AlbumListContainer";
 import { FullPage, Slide } from 'react-full-page';
+import classNames from 'classnames/bind';
+const cx = classNames.bind(styles);
 
 const MainTemplate = () => {
   return (
-    <div className="mainTemplate">
+    <div className={cx("mainTemplate")}>
       <FullPage>
         <Slide>
           <ImageSliderContainer/>

@@ -1,7 +1,9 @@
 import React  from 'react';
-import './ImageSlider.scss';
+import styles from './ImageSlider.scss';
 import ImageView from "../ImageView/ImageView";
 import styled, {keyframes} from 'styled-components'
+import classNames from 'classnames/bind';
+const cx = classNames.bind(styles);
 
 const ImageSlider = (props) => {
 
@@ -33,8 +35,8 @@ const ImageSlider = (props) => {
   `;
 
   return (
-    <div className={"imageSlider "+props.class}>
-      <ImageWrapper className="imageSlider-wrapper">
+    <div className={cx("imageSlider ", props.class)}>
+      <ImageWrapper className={cx("imageSlider-wrapper")}>
         {images.map((property, index)=> <ImageView key={index} property={property}/>)}
       </ImageWrapper>
     </div>

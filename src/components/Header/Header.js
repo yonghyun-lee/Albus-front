@@ -1,15 +1,17 @@
 import React  from 'react';
-import './Header.scss';
+import styles from './Header.scss';
 import {NavLink} from "react-router-dom";
 import ProfileNavMenu from "../ProfileNavMenu/ProfileNavMenu";
 import ProfileContainer from "../../containers/ProfileContainer";
+import classNames from 'classnames/bind';
+const cx = classNames.bind(styles);
 
 const Header = (props) => {
 
   return (
     <nav>
       <NavLink
-        className="logo"
+        className={cx("logo")}
         style={{ color: 'black'}}
         to="/main"
       >
