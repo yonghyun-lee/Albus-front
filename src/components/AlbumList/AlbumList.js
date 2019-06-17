@@ -10,7 +10,7 @@ const AlbumList = (props) => {
     <div className={"albumList " + props.class}>
       <Header user={props.user} open={props.open}/>
       <div className="albumList-header">
-        <h1>Your Albums</h1>
+        <h1>My Albums</h1>
       </div>
       <div className="albumList-content">
         <Album/>

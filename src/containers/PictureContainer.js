@@ -16,13 +16,15 @@ class PictureContainer extends Component {
 
   render() {
     return (
-      <MyPictureTemplate/>
+      <MyPictureTemplate user={this.props.user} open={this.props.open}/>
     );
   }
 }
 
 export default withRouter(
   connect((state) => ({
-      isLoggedIn: state.login.isLoggedIn
+      isLoggedIn: state.login.isLoggedIn,
+      user: state.login.user,
+      open: state.profile.open
     })
   )(PictureContainer));
