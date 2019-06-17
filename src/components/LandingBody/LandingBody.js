@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import styles from './LandingBody.scss';
+import './LandingBody.scss';
 import LoginContainer from "../../containers/LoginContainer";
-import classNames from 'classnames/bind';
-const cx = classNames.bind(styles);
 
 class LandingBody extends Component {
   render() {
     return (
-      <div className={cx("body")}>
-        <div className={cx("title")}>
+      <div className="body">
+        <div className="title">
           <h1>Make your Album.</h1>
           <LoginContainer/>
         </div>

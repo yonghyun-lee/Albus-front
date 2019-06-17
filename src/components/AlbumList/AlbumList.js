@@ -1,20 +1,18 @@
 import React  from 'react';
-import styles from './AlbumList.scss';
+import './AlbumList.scss';
 import Album from "../Album/Album";
 import Plus from "../Album/Plus";
 import Header from "../Header/Header";
-import classNames from 'classnames/bind';
-const cx = classNames.bind(styles);
 
 const AlbumList = (props) => {
 
   return (
-    <div className={cx("albumList ", props.class)}>
+    <div className={"albumList " + props.class}>
       <Header user={props.user} open={props.open}/>
-      <div className={cx("albumList-header")}>
+      <div className="albumList-header">
         <h1>My Albums</h1>
       </div>
-      <div className={cx("albumList-content")}>
+      <div className="albumList-content">
         <Album/>
         <Album/>
         <Album/>

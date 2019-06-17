@@ -1,13 +1,11 @@
 import React  from 'react';
-import styles from './Album.scss';
-import classNames from 'classnames/bind';
-const cx = classNames.bind(styles);
+import './Album.scss';
 
 const Album = (props) => {
 
   return (
-    <div className={cx("album-item")}>
-      <div className={cx("album-item-content")}>
+    <div className="album-item">
+      <div className="album-item-content">
         <h2>Monday</h2>
         <p>2019.06.01</p>
       </div>

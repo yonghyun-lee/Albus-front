@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import styles from './RegisterTemplate.scss';
+import './RegisterTemplate.scss';
 import RegisterTitle from "../RegisterTitle/RegisterTitle";
 import RegisterFormContainer from "../../containers/RegisterFormContainer";
 import LandingHeader from "../LandingHeader/LandingHeader";
-import classNames from 'classnames/bind';
-const cx = classNames.bind(styles);
 
 class RegisterTemplate extends Component {
   render() {
     return (
-      <div className={cx("registerTemplate")}>
+      <div className="registerTemplate">
         <LandingHeader/>
         <RegisterTitle/>
         <RegisterFormContainer/>

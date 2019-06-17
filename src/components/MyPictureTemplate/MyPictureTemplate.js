@@ -1,18 +1,16 @@
 import React  from 'react';
-import styles from './MyPictureTemplate.scss';
+import './MyPictureTemplate.scss';
 import Header from "../Header/Header";
 import Picture from "../Picture/Picture";
-import classNames from 'classnames/bind';
-const cx = classNames.bind(styles);
 
 const MyPictureTemplate = (props) => {
   return (
-    <div className={cx("myPictureTemplate")}>
+    <div className="myPictureTemplate">
       <Header user={props.user} open={props.open}/>
-      <div className={cx("myPicture-header")}>
+      <div className="myPicture-header">
         <h1>My Picture</h1>
       </div>
-      <div className={cx("myPicture-content")}>
+      <div className="myPicture-content">
         <Picture image={props.images[0]}/>
         <Picture image={props.images[1]}/>
       </div>

@@ -1,12 +1,10 @@
 import React  from 'react';
-import styles from './Profile.scss';
-import classNames from 'classnames/bind';
-const cx = classNames.bind(styles);
+import './Profile.scss';
 
 const Profile = (props) => {
 
   return (
-    <div className={cx("profile")}>
+    <div className="profile">
       <img onClick={props.handleMenu} src={props.user.thumbnail} alt="thumbnail"/>
       {/*<img src={props.thumbnail || defaultThumbnail} alt="thumbnail" />*/}
     </div>
