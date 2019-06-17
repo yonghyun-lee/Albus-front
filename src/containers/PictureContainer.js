@@ -3,6 +3,8 @@ import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
 import AuthService from "../lib/AuthService";
 import MyPictureTemplate from "../components/MyPictureTemplate/MyPictureTemplate";
+import testImage from "../static/images/test.jpg";
+import introImage from "../static/images/intro.jpg";
 
 class PictureContainer extends Component {
 
@@ -14,9 +16,11 @@ class PictureContainer extends Component {
     this.initialize();
   }
 
+  images = [testImage, introImage];
+
   render() {
     return (
-      <MyPictureTemplate user={this.props.user} open={this.props.open}/>
+      <MyPictureTemplate images={this.images} user={this.props.user} open={this.props.open}/>
     );
   }
 }

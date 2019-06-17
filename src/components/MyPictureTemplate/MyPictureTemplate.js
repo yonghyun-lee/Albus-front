@@ -13,7 +13,8 @@ const MyPictureTemplate = (props) => {
         <h1>My Picture</h1>
       </div>
       <div className={cx("myPicture-content")}>
-        <Picture/>
+        <Picture image={props.images[0]}/>
+        <Picture image={props.images[1]}/>
       </div>
     </div>
   );
