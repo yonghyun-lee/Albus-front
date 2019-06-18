@@ -10,6 +10,7 @@ const uploadPicture = createAction(UPLOAD_PICTURE, (payload)=> payload);
 
 // 모듈의 초기 상태를 정의합니다.
 const initialState = {
+  uploadState: false,
   uploadPicture: []
 };
 
@@ -22,6 +23,7 @@ export default handleActions({
     return produce(state, (draft) => {
       if (!action) return;
       draft.uploadPicture = action.payload;
+      draft.uploadState = true;
     });
   }
 }, initialState);

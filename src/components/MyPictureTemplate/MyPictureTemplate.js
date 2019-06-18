@@ -2,6 +2,7 @@ import React  from 'react';
 import './MyPictureTemplate.scss';
 import Header from "../Header/Header";
 import Picture from "../Picture/Picture";
+import MyPictureUpload from "../MyPictureUpload/MyPictureUpload";
 
 const MyPictureTemplate = (props) => {
   return (
@@ -10,7 +11,9 @@ const MyPictureTemplate = (props) => {
       <div className="myPicture-header">
         <h1>My Picture</h1>
       </div>
-
+      <MyPictureUpload
+        uploadState={props.uploadState}
+        uploadPicture={props.uploadPicture}/>
       <div className="myPicture-content">
         <Picture image={props.images[0]}/>
         <Picture image={props.images[1]}/>

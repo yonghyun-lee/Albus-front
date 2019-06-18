@@ -1,34 +1,23 @@
 @import "../../styles/utils";
 
-.myPictureTemplate {
+.myPicture-upload {
   width: 100%;
-  height: 100vh;
-  background-color: antiquewhite;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
-  .myPicture-header {
-    margin-top: 30px;
-    h1 {
-      text-align: center;
-      font-family: $DancingScript;
-      font-size: 6rem;
-    }
-  }
-
-  .myPicture-upload {
-    margin-top: 50px;
+  .image-upload {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-
     input {
       display: none;
     }
 
     label {
+      display: flex;
       padding-top: 15px;
-      text-align: center;
+      justify-content: center;
       width: 300px;
       height: 50px;
       font-size: 1.8rem;
@@ -42,18 +31,13 @@
         background-color: #ff9f9f;
       }
     }
-
-    .image-upload-active {
-      position: relative;
-      height: 200px;
-      background-color: white;
-    }
   }
 
-  .myPicture-content {
-    flex: 1;
-    display: inline-block;
-    padding-top: 30px;
-    float: left;
+  .image-upload-active {
+    margin-top: 20px;
+    width: 90%;
+    height: 200px;
+    background-color: white;
+    border-radius: 5px;
   }
 }

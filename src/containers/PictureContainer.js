@@ -20,6 +20,10 @@ class PictureContainer extends Component {
     console.log(e.target.files);
   };
 
+  uploadOnSubmit = () => {
+    console.log(this.props.uploadPicture)
+  };
+
   images = [testImage, introImage];
 
   render() {
@@ -28,7 +32,9 @@ class PictureContainer extends Component {
         images={this.images}
         user={this.props.user}
         open={this.props.open}
-        uploadOnChange={this.uploadOnChange}/>
+        uploadOnChange={this.uploadOnChange}
+        uploadState={this.props.uploadState}
+        uploadPicture={this.props.uploadPicture}/>
     );
   }
 }
@@ -37,6 +43,8 @@ export default withRouter(
   connect((state) => ({
       isLoggedIn: state.login.isLoggedIn,
       user: state.login.user,
-      open: state.profile.open
+      open: state.profile.open,
+      uploadState: state.picture.uploadState,
+      uploadPicture: state.picture.uploadPicture
     })
   )(PictureContainer));
