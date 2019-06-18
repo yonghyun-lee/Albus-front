@@ -16,11 +16,19 @@ class PictureContainer extends Component {
     this.initialize();
   }
 
+  uploadOnChange = (e) => {
+    console.log(e.target.files);
+  };
+
   images = [testImage, introImage];
 
   render() {
     return (
-      <MyPictureTemplate images={this.images} user={this.props.user} open={this.props.open}/>
+      <MyPictureTemplate
+        images={this.images}
+        user={this.props.user}
+        open={this.props.open}
+        uploadOnChange={this.uploadOnChange}/>
     );
   }
 }

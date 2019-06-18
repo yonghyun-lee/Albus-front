@@ -50,6 +50,10 @@
         background-color: #ff8787;
         border: none;
         color: white;
+
+        &:hover {
+          background-color: #ff9f9f;
+        }
       }
 
       .InputError {

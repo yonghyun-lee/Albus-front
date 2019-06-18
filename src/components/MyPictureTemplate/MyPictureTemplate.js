@@ -10,9 +10,7 @@ const MyPictureTemplate = (props) => {
       <div className="myPicture-header">
         <h1>My Picture</h1>
       </div>
-      <div className="myPicture-button">
-        <button>Upload</button>
-      </div>
+
       <div className="myPicture-content">
         <Picture image={props.images[0]}/>
         <Picture image={props.images[1]}/>
