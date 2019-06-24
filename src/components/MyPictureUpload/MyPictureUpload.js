@@ -12,7 +12,7 @@ const MyPictureUpload = (props) => {
       </div>
       <div className="image-upload-active">
         <MyPicturePreview uploadPicture={props.uploadPicture}/>
-        <button value="Save"/>
+        <button>Save</button>
       </div>
     </div>
   );
