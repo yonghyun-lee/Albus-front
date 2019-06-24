@@ -13,6 +13,7 @@ const MyPictureTemplate = (props) => {
       </div>
       <MyPictureUpload
         uploadState={props.uploadState}
+        uploadOnChange={props.uploadOnChange}
         uploadPicture={props.uploadPicture}/>
       <div className="myPicture-content">
         <Picture image={props.images[0]}/>

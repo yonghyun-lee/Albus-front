@@ -5,6 +5,7 @@ import AuthService from "../lib/AuthService";
 import MyPictureTemplate from "../components/MyPictureTemplate/MyPictureTemplate";
 import testImage from "../static/images/test.jpg";
 import introImage from "../static/images/intro.jpg";
+import {PictureActions} from "../store/actionCreators";
 
 class PictureContainer extends Component {
 
@@ -17,7 +18,15 @@ class PictureContainer extends Component {
   }
 
   uploadOnChange = (e) => {
-    console.log(e.target.files);
+    const reader = new FileReader();
+    const file = e.target.files[0];
+    const url = reader.readAsDataURL(file);
+
+    reader.onloadend = () => {
+      PictureActions.uploadPicture([reader.result]);
+    };
+
+    console.log(url);
   };
 
   uploadOnSubmit = () => {
