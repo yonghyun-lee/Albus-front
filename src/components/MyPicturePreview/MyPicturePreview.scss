@@ -1,6 +1,10 @@
 @import "../../styles/utils";
 
 .image-upload-preview {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
   img {
     margin: 20px;
     width: 450px;
