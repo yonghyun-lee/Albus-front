@@ -22,7 +22,7 @@ export default handleActions({
   [UPLOAD_PICTURE]: (state, action) => {
     return produce(state, (draft) => {
       if (!action) return;
-      draft.uploadPicture = action.payload;
+      draft.uploadPicture.push(action.payload);
       draft.uploadState = true;
     });
   }

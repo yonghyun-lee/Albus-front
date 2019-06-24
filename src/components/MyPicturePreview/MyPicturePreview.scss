@@ -1,0 +1,12 @@
+@import "../../styles/utils";
+
+.image-upload-preview {
+  img {
+    margin: 20px;
+    width: 450px;
+    height: 300px;
+    border: solid 1px black;
+    object-fit: contain;
+    background: black;
+  }
+}

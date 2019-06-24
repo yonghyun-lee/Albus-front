@@ -18,15 +18,15 @@ class PictureContainer extends Component {
   }
 
   uploadOnChange = (e) => {
-    const reader = new FileReader();
-    const file = e.target.files[0];
-    const url = reader.readAsDataURL(file);
+    for (let file of e.target.files) {
+      const reader = new FileReader();
 
-    reader.onloadend = () => {
-      PictureActions.uploadPicture([reader.result]);
-    };
+      reader.onloadend = () => {
+        PictureActions.uploadPicture(reader.result);
+      };
 
-    console.log(url);
+      reader.readAsDataURL(file);
+    }
   };
 
   uploadOnSubmit = () => {

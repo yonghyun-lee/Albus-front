@@ -1,9 +1,9 @@
 import React  from 'react';
 import './MyPictureUpload.scss';
+import MyPicturePreview from "../MyPicturePreview/MyPicturePreview";
 
 const MyPictureUpload = (props) => {
 
-  console.log("uploadPicture", props.uploadPicture);
   return (
     <div className="myPicture-upload">
       <div className="image-upload">
@@ -11,9 +11,7 @@ const MyPictureUpload = (props) => {
         <label htmlFor="image-upload-input">Upload</label>
       </div>
       <div className="image-upload-active">
-        <div className="image-upload-preview">
-          <img src={props.uploadPicture} alt=""/>
-        </div>
+        <MyPicturePreview uploadPicture={props.uploadPicture}/>
         <button value="Save"/>
       </div>
     </div>
