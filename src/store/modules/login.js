@@ -16,7 +16,6 @@ const initialState = {
   isLoggedIn: false,
   socialAuthResult: null,
   isSocial: false,
-
 };
 
 export const actionCreators = {

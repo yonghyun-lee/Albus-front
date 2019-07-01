@@ -103,7 +103,26 @@ class AuthService {
     const domain = process.env.NODE_ENV==='development'? 'localhost':'albus-service.ml';
     await Cookie.remove('access_token', domain);
     window.location.reload();
-  }
+  };
+
+  uploadPictures = async (formData) => {
+    const option = {
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      },
+      method: 'post',
+      data: formData,
+      withCredentials: true,
+      url: this.serverHost + '/picture'
+    };
+
+    try {
+      return await axios(option);
+    } catch (e) {
+      console.log(e.response.data);
+      throw e;
+    }
+  };
 }
 
 export default new AuthService();

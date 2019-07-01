@@ -18,6 +18,8 @@ class PictureContainer extends Component {
   }
 
   uploadOnChange = (e) => {
+    PictureActions.makeFormPicture(e.target.files);
+
     for (let file of e.target.files) {
       const reader = new FileReader();
 
@@ -29,8 +31,23 @@ class PictureContainer extends Component {
     }
   };
 
-  uploadOnSubmit = () => {
-    console.log(this.props.uploadPicture)
+  uploadOnSubmit = async () => {
+    const formData = new FormData();
+
+    for (let picture of this.props.formPicture) {
+      formData.append("picture", picture);
+    }
+
+    try {
+      const res = await AuthService.uploadPictures(formData);
+
+      if (res.status===200) {
+        alert("success");
+      }
+    } catch (e) {
+      console.log(e.response.data.status);
+      // console.error(e.response.data);
+    }
   };
 
   images = [testImage, introImage];
@@ -43,7 +60,8 @@ class PictureContainer extends Component {
         open={this.props.open}
         uploadOnChange={this.uploadOnChange}
         uploadState={this.props.uploadState}
-        uploadPicture={this.props.uploadPicture}/>
+        uploadPicture={this.props.uploadPicture}
+        uploadOnSubmit={this.uploadOnSubmit}/>
     );
   }
 }
@@ -54,6 +72,7 @@ export default withRouter(
       user: state.login.user,
       open: state.profile.open,
       uploadState: state.picture.uploadState,
-      uploadPicture: state.picture.uploadPicture
+      uploadPicture: state.picture.uploadPicture,
+      formPicture: state.picture.formPicture
     })
   )(PictureContainer));

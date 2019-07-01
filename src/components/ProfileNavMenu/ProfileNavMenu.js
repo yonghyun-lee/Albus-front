@@ -16,7 +16,7 @@ const ProfileNavMenu = (props) => {
       <div>
         <ul>
           <li><Link to="/picture">My Pictures</Link></li>
-          <li><a href='#' onClick={AuthService.logout}>Logout</a></li>
+          <li><button onClick={AuthService.logout}>Logout</button></li>
         </ul>
       </div>
     </nav>
